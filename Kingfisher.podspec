@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Kingfisher"
-  s.version      = "4.10.1"
+  s.version      = "4.10.1-privacy"
   s.summary      = "A lightweight and pure Swift implemented library for downloading and cacheing image from the web."
 
   s.description  = <<-DESC
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
   s.watchos.deployment_target = "3.0"
 
-  s.source       = { :git => "https://github.com/onevcat/Kingfisher.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/dearwayne/Kingfisher.git", :tag => s.version }
   
   s.source_files  = ["Sources/*.swift", "Sources/Kingfisher.h", "Sources/Kingfisher.swift"]
   s.public_header_files = ["Sources/Kingfisher.h"]
@@ -51,5 +51,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.framework = "CFNetwork"
+
+  s.resource_bundles = {"Kingfisher" => ["Sources/PrivacyInfo.xcprivacy"]}
 
 end
